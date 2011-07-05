@@ -5,7 +5,7 @@
 # Installing jquery-instafeed
 You can either download the plugin and distribute it with your application. 
 
-`<script src="js/jquery.instafeed.min.1.js" type="text/javascript" charset="utf-8"></script>`
+`<script src="js/jquery.instafeed.min.js" type="text/javascript" charset="utf-8"></script>`
 
 Or you can use the distributed version (hosted on a high availability content delivery network) if you prefer to use a third party
 
