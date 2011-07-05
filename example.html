@@ -3,10 +3,89 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> jquery-instafeed example.</title>
+		<style>
+			body{
+			    padding: 0;
+			    margin: 2em;
+			    color: #6e6e6e;
+			    font-family : 'Helvetica Neue', arial, serif;
+			}
+			h1{
+				font-weight: 400;
+				font-size: 4em;
+				color: #3e3e3e;
+			}
+			
+			div img{
+				border: 1px solid #999;
+				padding: 0.3333em;
+				background-color: #ddd;
+				margin: .66666em .66666em 0 0 ;
+				opacity: 0.4;
+				width: 75px;
+				height: 75px;
+			}
+			div a{
+				display: block-inline;
+			}
+			div a:hover img{
+				opacity: 1;
+			}
+			pre{
+			  	white-space: pre-wrap;
+				background-color: #3e3e3e;
+				padding: 1em;
+			}
+			code{
+    			font-family: Monaco, Courier;
+				font-size: .75em;
+				color: #ccc;
+			}
+		</style>
 	</head>
 	<body id="{% block id %}{% endblock %}" class="{% block bodyclass %}{% endblock %}">
 
+<h1>jquery-instafeed example 1</h1>
+
+<p>
+	In this example we make a plain vanila call - the only thing we have to pass into the instafeed is the url for the jsonp feed.
+</p>
+<div class="content1"></div>
+
+<h1>jquery-instafeed example 2</h1>
+<p>
+	In this example we pass in the optional items argument. This limits the maximum items returned.
+</p>
+<div class="content2"></div>
+
+<h1>HTML Structure</h1>
+
+<p>
+	The structure of the html has been kept as minimal as possible to allow you to style your work as freely as possible. Each photo links to the instgram page, but the a tags have a data attritute that you can use reference the larger image if you wanted to lightbox it or something similar.
+</p>
+
+<div class="structure">
+	<pre><code>
+		&lt;div id="ins"&gt;
+			&lt;a data-standard-resolution="URL TO STANDARD RESOLUTION" href="URL TO INSTAGRAM PAGE" rel="instafeed-instagram-photo" title="INSTAGRAM CAPTION"&gt;
+				&lt;img src="URL TO THUMBNAIL" alt="INSTAGRAM CAPTION"&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+	</code></pre>
+</div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="http://cdn.instafeed.me/jquery.instafeed.min.1.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$('div.content1').instafeed({
+			'jsonp' : 'http://instafeed.me/f/7ac760.jsonp?jsoncallback=?'
+	});
+	$('div.content2').instafeed({
+			'jsonp' : 'http://instafeed.me/f/7ac760.jsonp?jsoncallback=?',
+			'items' : 5
+	});
+
+</script>
 	</body>
 </html>
