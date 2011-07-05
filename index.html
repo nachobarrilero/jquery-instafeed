@@ -69,6 +69,18 @@
       get the source code on GitHub : <a href="http://github.com/jamiecurle/jquery-instafeed">jamiecurle/jquery-instafeed</a>
     </div>
 
+
+	<h2>Example</h2>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.instafeed.me/jquery.instafeed.min.1.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$('div.content').instafeed({
+				'jsonp' : 'http://instafeed.me/f/7ac760.jsonp?jsoncallback=?',
+				'items' : 5
+		});
+
+	</script>
+	<div class="content"></div>
   </div>
 
   
