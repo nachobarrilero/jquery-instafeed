@@ -9,7 +9,7 @@ You can either download the plugin and distribute it with your application.
 
 Or you can use the distributed version (hosted on a high availability content delivery network) if you prefer to use a third party
 
-`<script src="http://cdn.instafeed.me/jquery.instafeed.min.1.js" type="text/javascript" charset="utf-8"></script>`
+`<script src="http://cdn.instafeed.me/jquery.instafeed.min.js" type="text/javascript" charset="utf-8"></script>`
 
 # Using jquery-instafeed
 
